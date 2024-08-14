@@ -1,0 +1,10 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="tv_options_edit_channels">
+<mask id="mask0_1_137" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28" height="28">
+<rect id="Bounding box" width="28" height="28" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1_137)">
+<path id="tv_options_edit_channels_2" d="M2.33334 18.6667V16.3333H4.66668V18.6667H2.33334ZM2.33334 14V11.6667H4.66668V14H2.33334ZM2.33334 9.33333V7H4.66668V9.33333H2.33334ZM7.00001 18.6667V16.3333H11.6667V18.6667H7.00001ZM7.00001 14V11.6667H22.1667V14H7.00001ZM7.00001 9.33333V7H22.1667V9.33333H7.00001ZM18.6083 23.3333L13.65 18.375L15.3125 16.7125L18.6083 20.0083L25.2 13.4167L26.8333 15.1083L18.6083 23.3333Z" fill="#212121"/>
+</g>
+</g>
+</svg>
