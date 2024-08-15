@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "custom-image": "url('/src/assets/background_picture.jpg')",
+        "custom-image": "url('/src/assets/images/background_picture.jpg')",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
