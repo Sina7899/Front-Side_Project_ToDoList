@@ -18,7 +18,7 @@ export const CLASSES = {
   },
   SignUp_Page: {
     mainTagStyle:
-      "flex justify-center items-center w-auto h-screen  bg-custom-image bg-cover font-roboto  p-[65px]",
+      "flex justify-center items-center w-auto h-screen  bg-custom-image bg-cover font-roboto p-[65px]",
     formStyle:
       "flex flex-col items-center p-[42px_38px] h-fit w-fit max-w-[328px] gap-[40px] rounded-[5px] bg-Blue_B5",
     formTitleStyle:
@@ -43,7 +43,7 @@ export const CLASSES = {
     iconStyle: "w-[28px] h-[28px] text-Black_B7",
     spanStyle: "text-Black_B7 text-[16px] font-medium",
     cardsSectionStyle:
-      "flex flex-col justify-start items-center gap-[20px] overflow-y-scroll h-fit max-h-full w-[560px] p-[28px_20px] bg-Blue_B3 rounded-[10px] custom-scrollbar",
+      "flex flex-col justify-start items-center gap-[20px] overflow-y-scroll h-fit max-h-full w-[528px] p-[30px_20px] bg-Blue_B3 rounded-[10px] custom-scrollbar",
     cardTagStyle:
       "flex justify-between items-center w-[468px] min-h-[90px] p-[0px_20px] bg-White_W3 rounded-[5px]",
     cardInfoDivStyle: "flex flex-col justify-center items-start gap-[8px]",
