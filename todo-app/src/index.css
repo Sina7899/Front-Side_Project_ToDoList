@@ -21,6 +21,10 @@
   border-radius: 10px;
 }
 
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
