@@ -31,6 +31,7 @@ export const CLASSES = {
       "w-[68px] h-[28px] rounded-[5px] bg-Black_B7 text-[10px] font-bold text-White_W3 text-center p-0 hover:cursor-pointer hover:bg-Black_B6",
   },
   ToDoApp_Page: {
+    loadingDivStyle: "block m-auto text-Black_B7 text-[20px] font-bold",
     mainTagStyle:
       "flex justify-between items-start gap-[64px] w-screen h-screen bg-White_W3 font-roboto p-[76px_64px]",
     navStyle: "flex flex-col items-center gap-[118px] h-fit w-auto",
@@ -45,10 +46,10 @@ export const CLASSES = {
     cardsSectionStyle:
       "flex flex-col justify-start items-center gap-[20px] overflow-y-scroll h-fit max-h-full w-[528px] p-[30px_20px] bg-Blue_B3 rounded-[10px] custom-scrollbar",
     cardTagStyle:
-      "flex justify-between items-center w-[468px] min-h-[90px] p-[0px_20px] bg-White_W3 rounded-[5px]",
+      "flex justify-between items-center w-[468px] min-h-[90px] p-[0px_20px] bg-White_W3 rounded-[5px] hover:cursor-pointer",
     cardInfoDivStyle: "flex flex-col justify-center items-start gap-[8px]",
-    cardTitleTagStyle: "text-Black_B7 text-[20px] font-bold",
-    cardDescriptionStyle: "text-Black_B7 text-[14px] font-normal",
+    cardTitleTagStyle: "text-Black_B7 text-[20px] font-bold truncate w-76",
+    cardDescriptionStyle: "text-Black_B7 text-[14px] font-normal truncate w-48",
     cardButtonsDivStyle: "flex flex-col justify-center items-center gap-[4px]",
     doneButtonStyle:
       "w-[68px] h-[28px] rounded-[5px] bg-Blue_B6 text-[10px] font-bold text-White_W3 text-center p-0 hover:cursor-pointer hover:bg-Blue_B7",
