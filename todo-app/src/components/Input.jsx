@@ -7,6 +7,9 @@ function Input({
   inputPattern,
   inputPlaceholder,
   required,
+  inputRef,
+  inputValue,
+  inputOnChange,
   labelStyle,
   inputStyle,
 }) {
@@ -15,11 +18,14 @@ function Input({
       {labelText}
       <input
         id={inputId}
+        value={inputValue}
+        ref={inputRef}
         name={inputName}
         type={inputType}
         pattern={inputPattern}
         placeholder={inputPlaceholder}
         required={required}
+        onChange={inputOnChange}
         className={inputStyle}
       />
     </label>
