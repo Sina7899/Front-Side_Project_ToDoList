@@ -1,4 +1,5 @@
 function Card({
+  cardStatus,
   cardKey,
   CardTag,
   CardTitleTag,
@@ -15,7 +16,9 @@ function Card({
   return (
     <CardTag
       key={cardKey}
-      onClick={() => cardOnClick(cardTitle, cardDescription, cardKey)}
+      onClick={() =>
+        cardOnClick(cardTitle, cardDescription, cardKey, cardStatus)
+      }
       className={cardTagStyle}
     >
       <div className={cardInfoDivStyle}>
