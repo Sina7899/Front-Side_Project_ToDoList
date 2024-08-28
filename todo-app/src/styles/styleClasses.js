@@ -42,11 +42,9 @@ export const CLASSES = {
     listItemsStyle:
       "flex justify-center items-center gap-[8px] p-[2px_8px] bg-Blue_B5 rounded-[5px]",
     iconStyle: "w-[28px] h-[28px] text-Black_B7",
-    spanStyle: "text-Black_B7 text-[16px] font-medium",
+    spanStyle: "text-Black_B7 text-[16px] font-medium text-nowrap text-center",
     cardsSectionStyle:
       "flex flex-col justify-start items-center gap-[20px] overflow-y-scroll h-fit max-h-full w-[528px] p-[30px_20px] bg-Blue_B3 rounded-[10px] custom-scrollbar",
-    cardTagStyle:
-      "flex justify-between items-center w-[468px] min-h-[90px] p-[0px_20px] bg-White_W3 rounded-[5px] hover:cursor-pointer",
     cardInfoDivStyle: "flex flex-col justify-center items-start gap-[8px]",
     cardTitleTagStyle: "text-Black_B7 text-[20px] font-bold truncate w-76",
     cardDescriptionStyle: "text-Black_B7 text-[14px] font-normal truncate w-48",
@@ -57,6 +55,8 @@ export const CLASSES = {
       "w-[68px] h-[28px] rounded-[5px] bg-Black_B7 text-[10px] font-bold text-White_W3 text-center p-0 hover:cursor-pointer hover:bg-Black_B6",
     completedBadgeStyle:
       "w-[68px] h-[24px] rounded-[5px] bg-Blue_B7 text-[10px] font-bold text-White_W3 text-center p-0",
+    inCompletedBadgeStyle:
+      "w-[68px] h-[24px] rounded-[5px] bg-Black_B7 text-[10px] font-bold text-White_W3 text-center p-0",
     boxContainerTagStyle:
       "flex w-[544px] p-[28px] flex-col justify-center items-end gap-[24px] rounded-[10px] border border-dashed border-Black_B7",
     boxDataDivStyle: "flex flex-col justify-start items-start gap-[8px] w-full",
@@ -67,6 +67,8 @@ export const CLASSES = {
     boxButtonsDivStyle: "flex justify-center items-center gap-[8px]",
     boxAddButtonStyle:
       "flex justify-center items-center gap-[4px] w-[52px] h-[28px] rounded-[5px] bg-Blue_B6 hover:bg-Blue_B7",
-    boxAddButtonSpanStyle: "text-[10px] font-bold text-White_W3",
+    boxButtonsSpanStyle: "text-[10px] font-bold text-White_W3",
+    boxResetButtonStyle:
+      "flex justify-center items-center gap-[4px] w-[52px] h-[28px] rounded-[5px] bg-Black_B7 hover:bg-Black_B6",
   },
 };
