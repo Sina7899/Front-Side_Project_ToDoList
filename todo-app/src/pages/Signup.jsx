@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { CLASSES } from "../styles/styleClasses.js";
@@ -8,14 +8,10 @@ import { Form } from "../components/Form.jsx";
 import { Input } from "../components/Input.jsx";
 import { Button } from "../components/Button.jsx";
 
-import { ToDoAppContexts } from "../store/ToDo_App-context.jsx";
-
-import { signUp_InRequest } from "../API/signUp_In.js";
+import { signUpHandler } from "../API/signUp_In.js";
 import { URLS } from "../API/api.js";
 
 function SignUp() {
-  const CONTEXTS = useContext(ToDoAppContexts);
-
   const [signUpFormData, setSignUpFormData] = useState({
     firstName: "",
     lastName: "",
@@ -33,45 +29,22 @@ function SignUp() {
 
   const navigate = useNavigate();
 
-  function capitalizeFirstLetter(word) {
-    if (!word) return "";
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-  }
-
-  function userInfoAddToLS(firstName, lastName, username) {
-    CONTEXTS.localStorage.add("firstName", capitalizeFirstLetter(firstName));
-    CONTEXTS.localStorage.add("lastName", capitalizeFirstLetter(lastName));
-    CONTEXTS.localStorage.add("username", username);
-  }
-
-  function signUpHandler(
+  function signUpButtonOnClick(
     signUpRoute,
     userSingUpData,
     signInRoute,
     userSingInData
   ) {
-    signUp_InRequest(signUpRoute, userSingUpData)
-      .then((response) => {
-        if (response.status === 201) {
-          userInfoAddToLS(
-            userSingUpData.firstName,
-            userSingUpData.lastName,
-            userSingUpData.username
-          );
-          console.log("Request was successful:", response.data);
-          CONTEXTS.singInHandler(signInRoute, userSingInData).then((res) => {
-            if (res) {
-              navigate("/ToDoApp");
-            }
-          });
-        } else {
-          console.log("Request was not successful:", response);
-          alert(response.request.response);
-        }
-      })
-      .catch((error) => {
-        console.error("There was an error making the request:", error);
-      });
+    signUpHandler(
+      signUpRoute,
+      userSingUpData,
+      signInRoute,
+      userSingInData
+    ).then((res) => {
+      if (res) {
+        navigate("/ToDoApp");
+      }
+    });
   }
 
   const formProps = {
@@ -172,7 +145,7 @@ function SignUp() {
     inputValue: "Sign In",
     buttonOnClick: (e) => {
       e.preventDefault();
-      signUpHandler(
+      signUpButtonOnClick(
         `http://${URLS.baseURL}/api/signup`,
         userSignUpData,
         `http://${URLS.baseURL}/api/login`,

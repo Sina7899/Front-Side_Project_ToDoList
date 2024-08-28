@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { CLASSES } from "../styles/styleClasses.js";
@@ -10,20 +10,16 @@ import { Button } from "../components/Button.jsx";
 
 import { URLS } from "../API/api.js";
 
-import { ToDoAppContexts } from "../store/ToDo_App-context.jsx";
-
-import { getTasksRequest } from "../API/todoApp.js";
+import { singInHandler } from "../API/signUp_In.js";
 
 function LoginPage() {
-  const CONTEXTS = useContext(ToDoAppContexts);
-
-  const [logInFormData, setlogInFormData] = useState({
+  const [logInFormData, setLogInFormData] = useState({
     username: "",
     password: "",
   });
 
   const handleSignUpInputsChange = (e) => {
-    setlogInFormData({
+    setLogInFormData({
       ...logInFormData,
       [e.target.name]: e.target.value,
     });
@@ -31,8 +27,8 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
-  function logInHandler(logInRoute, userLogInData) {
-    CONTEXTS.singInHandler(logInRoute, userLogInData).then((response) => {
+  function logInButtonOnClick(logInRoute, userLogInData) {
+    singInHandler(logInRoute, userLogInData).then((response) => {
       if (response) {
         navigate("/ToDoApp");
       }
@@ -88,7 +84,7 @@ function LoginPage() {
     inputValue: "Log in",
     buttonOnClick: (e) => {
       e.preventDefault();
-      logInHandler(`http://${URLS.baseURL}/api/login`, logInFormData);
+      logInButtonOnClick(`http://${URLS.baseURL}/api/login`, logInFormData);
     },
     buttonStyle: CLASSES.Login_Page.loginButtonStyle,
   };
